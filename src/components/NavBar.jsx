@@ -36,9 +36,9 @@ export const NavBar = () => {
         </Navbar.Toggle>
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="ms-auto">
-            <NavLink 
+            <NavLink
               to={"/category/movie"}
-              className={ 
+              className={
                 activeLink === "movie" ? "active navbar-link" : "navbar-link"
               }
               onClick={() => onUpdateActiveLink("movie")}
@@ -64,8 +64,7 @@ export const NavBar = () => {
               Actors
             </NavLink>
           </Nav>
-          <span className="navbar-text">
-          </span>
+          <span className="navbar-text"></span>
         </Navbar.Collapse>
       </Container>
     </Navbar>
