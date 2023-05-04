@@ -8,19 +8,19 @@ import { FcFilmReel } from "react-icons/fc";
 import { FcConferenceCall } from "react-icons/fc";
 import { FcFilm } from "react-icons/fc";
 import { FcSpeaker } from "react-icons/fc";
-import {ColorRing} from "react-loader-spinner";
-
+import { ColorRing } from "react-loader-spinner";
+import { Helmet } from "react-helmet";
 
 function Details() {
   const params = useParams();
   const [details, setDetails] = useState({});
-  const [loading, setLoading] = useState(false)
+  const [loading, setLoading] = useState(false);
   useEffect(() => {
-    setLoading(true)
+    setLoading(true);
     setTimeout(() => {
-      setLoading(false)
-    }, 1500)
-  },[])
+      setLoading(false);
+    }, 1500);
+  }, []);
 
   const fetchDetails = async () => {
     const data = await fetch(
@@ -39,21 +39,23 @@ function Details() {
     document.title = "Vision | Details";
   }, []);
 
-  return (
-    loading?
+  return loading ? (
     <ColorRing
-visible={true} 
-height="80"
-width="80"
-ariaLabel="blocks-loading"
-wrapperStyle={{}}
-wrapperClass="blocks-wrapper"
-colors={['#e15b64', '#f47e60', '#f8b26a', '#abbd81', '#849b87']}
-/>
-    :
+      visible={true}
+      height="80"
+      width="80"
+      ariaLabel="blocks-loading"
+      wrapperStyle={{}}
+      wrapperClass="blocks-wrapper"
+      colors={["#e15b64", "#f47e60", "#f8b26a", "#abbd81", "#849b87"]}
+    />
+  ) : (
     <div>
-      <NavBar/>
-      <BannerFind/>
+      <Helmet>
+        <title>Vision | Details</title>
+      </Helmet>
+      <NavBar />
+      <BannerFind />
       <div className="detail-wrapper">
         <img
           className="image-details"
@@ -64,7 +66,9 @@ colors={['#e15b64', '#f47e60', '#f8b26a', '#abbd81', '#849b87']}
           <h1 className="description-details">
             <FcFilm /> {details.original_title}
           </h1>
-          <h4 className="tagline-details"><FcSpeaker/> "{details.tagline}"</h4>
+          <h4 className="tagline-details">
+            <FcSpeaker /> "{details.tagline}"
+          </h4>
           <div className="grill">
             <p className="stats">
               <FcFilmReel /> Release: {details.release_date}{" "}
@@ -81,7 +85,7 @@ colors={['#e15b64', '#f47e60', '#f8b26a', '#abbd81', '#849b87']}
           </div>
         </div>
       </div>
-      <Trailer/>
+      <Trailer />
     </div>
   );
 }
