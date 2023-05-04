@@ -10,14 +10,16 @@ export default function Movie({ movie }) {
       exit={{ opacity: 0 }}
     >
       <motion.div whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }}>
-      <Link to={"details/" + movie.id}>
-      <h2 key={movie.id} className="movie-title">{movie.title}</h2>
-      <img
-        className="img-post"
-        src={`https://image.tmdb.org/t/p/w500` + movie.backdrop_path}
-        alt=""
-      />
-      </Link>
+        <Link to={"details/" + movie.id}>
+          <h2 key={movie.id} className="movie-title">
+            {movie.title}
+          </h2>
+          <img
+            className="img-post"
+            src={`https://image.tmdb.org/t/p/w500` + movie.backdrop_path}
+            alt=""
+          />
+        </Link>
       </motion.div>
     </motion.div>
   );
