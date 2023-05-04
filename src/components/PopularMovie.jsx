@@ -2,8 +2,7 @@ import React from "react";
 import { useEffect, useState } from "react";
 import Movie from "./Movie";
 import Filter from "./Filter";
-import { motion, AnimatePresence } from "framer-motion"; 
-
+import { motion, AnimatePresence } from "framer-motion";
 
 export function PopularMovie() {
   const [popular, setPopular] = useState([]);
@@ -30,9 +29,9 @@ export function PopularMovie() {
         activeGenre={activeGenre}
         setActiveGenre={setActiveGenre}
       />
-  
+
       <motion.div layout className="popular-movies">
-        <AnimatePresence/>
+        <AnimatePresence />
         {filtered?.map((movie) => {
           return <Movie key={movie.id} movie={movie} />;
         })}
