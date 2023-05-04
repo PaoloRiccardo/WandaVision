@@ -61,13 +61,12 @@ ul {
 a:hover {
   text-decoration: none;
 }
-.logo-img{
+.logo-img {
   width: 100%;
   height: auto;
 }
 
-
-img{
+img {
   width: 100%;
   height: auto;
 }
@@ -572,11 +571,10 @@ a {
 /******************** DETAILS PAGE ****************/
 .description-details {
   color: white;
-
 }
 .detail-wrapper {
   padding-top: 5rem;
-  margin: 2rem inherit 5rem;
+  margin: 10rem inherit 5rem;
   display: flex;
   margin-left: 1.5rem;
 }
@@ -586,33 +584,32 @@ a {
 }
 @media (max-width: 1068px) {
   .detail-wrapper {
-  flex-direction: column;
-}
+    flex-direction: column;
+  }
 }
 
-  @media (max-width: 1068px)  {
-    .info{
+@media (max-width: 1068px) {
+  .info {
     margin-top: 3rem;
     margin-left: 0;
-}
   }
+}
 .paragraph-movie {
   color: white;
   font-size: 1.1rem;
   line-height: 1.8rem;
 }
 
-
 .image-details {
   object-fit: cover;
-    border-radius: 2rem;
-    width: 15%;
-    }
-    @media (max-width: 1068px) {
-      .image-details{
-      width: 60%;
-      }
-    }
+  border-radius: 2rem;
+  width: 15%;
+}
+@media (max-width: 1068px) {
+  .image-details {
+    width: 60%;
+  }
+}
 
 .grill {
   margin-top: 2rem;
@@ -628,18 +625,16 @@ a {
 iframe {
   margin: 3rem;
 }
-@media (max-width: 800px){
-  iframe{
+@media (max-width: 800px) {
+  iframe {
     width: 80%;
     height: 15rem;
   }
 }
 .trailer-presentation {
-    margin-top: 2rem;
-    margin-left: 1.5rem;
+  margin-top: 2rem;
+  margin-left: 1.5rem;
 }
-
-
 
 /***** Person **********/
 
